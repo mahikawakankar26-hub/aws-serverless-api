@@ -1,12 +1,12 @@
-# 🧩 AWS Serverless Task API
+#  AWS Serverless Task API
 
-## 📌 Project Overview
+##  Project Overview
 This project demonstrates a simple **serverless REST API** built using AWS services.  
 The API allows users to **create tasks** and **retrieve a list of tasks** without managing any servers.
 
 ---
 
-## 🎯 Objective
+##  Objective
 - Build a lightweight backend API using AWS serverless services  
 - Demonstrate knowledge of:
   - AWS Lambda  
@@ -16,12 +16,12 @@ The API allows users to **create tasks** and **retrieve a list of tasks** withou
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 Client → API Gateway → Lambda → CloudWatch Logs
 
 ---
 
-## 🛠️ Services Used
+##  Services Used
 
 ### 1. AWS Lambda
 - Used to run backend logic
@@ -40,9 +40,9 @@ Client → API Gateway → Lambda → CloudWatch Logs
 
 ---
 
-## ⚙️ Creation & Deployment Steps
+##  Creation & Deployment Steps
 
-### 🔹 Step 1: Create Lambda Function
+###  Step 1: Create Lambda Function
 1. Go to AWS Console → Lambda  
 2. Click **Create function**  
 3. Select **Author from scratch**  
@@ -52,7 +52,7 @@ Client → API Gateway → Lambda → CloudWatch Logs
 
 ---
 
-### 🔹 Step 2: Add Lambda Code
+###  Step 2: Add Lambda Code
 Replace default code with:
 
 python
@@ -106,7 +106,6 @@ def lambda_handler(event, context):
     `
     ---
 
-    ## 🔹 Step 3: Create API Gateway
     
 1. Go to AWS Console → API Gateway  
 2. Click **Create API**  
@@ -115,7 +114,7 @@ def lambda_handler(event, context):
 
 ---
 
-## 🔹 Step 4: Configure API
+##  Step 4: Configure API
 1. Enter API name: `task-api`  
 2. Under **Integrations**, click **Add integration**  
 3. Select **Lambda**  
@@ -125,7 +124,7 @@ def lambda_handler(event, context):
 
 ---
 
-## 🔹 Step 5: Create Routes
+##  Step 5: Create Routes
 Add the following routes:
 
 - Method: `GET`  
@@ -140,7 +139,7 @@ After adding both routes, click **Next**
 
 ---
 
-## 🔹 Step 6: Deploy API
+##  Step 6: Deploy API
 1. Use the default stage: `$default`  
 2. Note: HTTP APIs auto-deploy, no manual deployment needed  
 3. Go to **Stages → $default**  
